@@ -1,0 +1,21 @@
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+.text {
+	position: relative;
+	transform: translate(300px, -750px);
+	color: $text;
+	max-width: 90%;
+	padding: 2em 3em;
+	background: rgba(0, 0, 0, 0.4);
+	text-shadow: 0px 0px 2px #131415;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.center {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}

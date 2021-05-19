@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+  <meta charset="utf-8">
+  <title>CTF Tool</title>
+  <meta name="description" content="Perfect tool for your CTF workload.">
+  <meta name="author" content="0xTaShU" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/loading.css' %}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/loading.js' %}"></script>
+</head>
+<body>
+
+ <!-- Navbar Navigation Header code  -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{%url 'home'  %}">S@n!t!z3r</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="navbar-brand" href="{%url 'home'  %}">Home</a>
+                </li>
+
+
+
+              </ul>
+            </div>
+          </nav>
+        </header>
+
+<!-- particles.js container -->
+<div id="particles-js"></div>
+<!-- scripts -->
+<script src="{% static '/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+<div class="panel1" >
+    <div class="loading" delay-hide="1500"></div>
+    <div class="text-center"><h1 style="color: white;">Tools</h1></div>
+    <div class="row text-center">
+         <!-- Base card -->
+    <div class="col-lg-4 col-md-4 col-sm-12 pt-3 " >
+  <div class="card bg-dark" style="width:350px">
+                    <img src="{% static 'images/crypto.jpeg' %}" alt="Cryptography">
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: white">Crypto</h4>
+                        <p class="card-text" style="font-size: 20px; color: white" >Base Encodings</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#base">Use</button>
+                    </div>
+                </div>
+    </div>
+    <!-- Rot card -->
+            <div class="col-lg-4 col-md-4 col-sm-12 pt-3" >
+                <div class="card bg-dark" style="width:350px">
+                    <img src="{% static 'images/rot1.png' %}" alt="Cryptography" >
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: white">Crypto</h4>
+                        <p class="card-text" style="font-size: 20px; color: white">ROT</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rot">Use</button>
+                    </div>
+                </div>
+            </div>
+        <!-- caesar card -->
+            <div class="col-lg-4 col-md-4 col-sm-12 pt-3" >
+                <div class="card bg-dark" style="width:350px">
+                    <img src="{% static 'images/caesar1.png' %}" alt="Cryptography" >
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: white">Crypto</h4>
+                        <p class="card-text" style="font-size: 20px; color: white">Caesar Cipher</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#caesar">Use</button>
+                    </div>
+                </div>
+            </div>
+            <!-- morse card -->
+            <div class="col-lg-4 col-md-4 col-sm-12 pt-3" >
+                <div class="card bg-dark" style="width:350px">
+                    <img src="{% static 'images/morse1.png' %}" alt="Cryptography" >
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: white">Crypto</h4>
+                        <p class="card-text" style="font-size: 20px; color: white">Morse Code</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#morse">Use</button>
+                    </div>
+                </div>
+            </div>
+            <!-- bacon card -->
+            <div class="col-lg-4 col-md-4 col-sm-12 pt-3" >
+                <div class="card bg-dark" style="width:350px">
+                    <img src="{% static 'images/bacon1.png' %}" alt="Cryptography" >
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: white">Crypto</h4>
+                        <p class="card-text" style="font-size: 20px; color: white">Bacon Cipher</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bacon">Use</button>
+                    </div>
+                </div>
+            </div>
+            <!-- vigenere card -->
+            <div class="col-lg-4 col-md-4 col-sm-12 pt-3" >
+                <div class="card bg-dark" style="width:350px">
+                    <img src="{% static 'images/vigenere1.png' %}" alt="Cryptography" >
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: white">Crypto</h4>
+                        <p class="card-text" style="font-size: 20px; color: white">Vigenère</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vigenere">Use</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Sherlock card -->
+            <div class="col-lg-4 col-md-4 col-sm-12 pt-3">
+                <div class="card bg-dark" style="width:350px">
+                    <img src="{% static 'images/sherlock1.png' %}" alt="OSINT" >
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: white">OSINT</h4>
+                        <p class="card-text" style="color: white;font-size: 20px">Sherlock</p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#sherlock">Use</button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+ <section class="bg-primary pb-2">
+         <div class="text-center">
+             <h3 class="display-4 text-white ">About US!! </h3>
+             <a class="navbar-brand text-white" href="{%url 'us'  %}">Click Here!</a>
+         </div>
+</section>
+<section class="bg-dark pb-2">
+    <article  class="pt-2 text-center text-white">
+        <div>
+            <p>Designed and Developed for Minor-Project 1.</p>
+        </div>
+    </article>
+</section>
+    <!-- base Modal -->
+<div class="modal fade "  id="base" tabindex="-1" role="dialog" aria-labelledby="baseTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title "  id="baseTitle" style="color: white" >Base</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#base32">Base 32</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#base64">Base 64</button></div>
+          <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#base86">Base 86</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base32 Modal -->
+<div class="modal fade"  id="base32" tabindex="-1" role="dialog" aria-labelledby="base32Title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="base32Title" style="color: white">Base 32</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#b32encode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#b32decode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- base64 - decode Modal -->
+<div class="modal fade"  id="b32decode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="decode32Title" style="color: white">Base32 - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/base32d/" method="POST">
+                {% csrf_token %}
+                <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="b32d" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base32 - encode Modal -->
+<div class="modal fade"  id="b32encode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="encode32Title" style="color: white">Base32 - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/base32e/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="b32e" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base64 Modal -->
+<div class="modal fade"  id="base64" tabindex="-1" role="dialog" aria-labelledby="base64Title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="base64Title" style="color: white">Base 64</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#b64encode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#b64decode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base64 - decode Modal -->
+<div class="modal fade"  id="b64decode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="decodeTitle" style="color: white">Base64 - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/base64d/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="b" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base64 - encode Modal -->
+<div class="modal fade"  id="b64encode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="encodeTitle" style="color: white">Base64 - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/base64e/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="c" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base86 Modal -->
+<div class="modal fade"  id="base86" tabindex="-1" role="dialog" aria-labelledby="base86Title" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="base86Title" style="color: white">Base 86</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#b86encode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#b86decode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base86 - decode Modal -->
+<div class="modal fade"  id="b86decode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="decode86Title" style="color: white">Base86 - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/base86d/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="b86d" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- base86 - encode Modal -->
+<div class="modal fade"  id="b86encode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="encode86Title" style="color: white">Base86 - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/base86e/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="b86e" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- sherlock Modal -->
+<div class="modal fade"  id="sherlock" tabindex="-1" role="dialog" aria-labelledby="sherlockTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="sherlockTitle" style="color: white">Sherlock</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/sherlock/" method="POST">
+                {% csrf_token %}
+                <h2 style="color: white">Input Text:</h2>
+             <input type="text" name="s" required><br><br>
+                {{data_external}}<br><br>
+                {{sher}}
+                <br><br>
+            <input type="submit" value="sherlock">
+             </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!-- rot Modal -->
+<div class="modal fade"  id="rot" tabindex="-1" role="dialog" aria-labelledby="rotTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="rotTitle" style="color: white">Rot</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rotencode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#rotdecode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- rot - decode Modal -->
+<div class="modal fade"  id="rotdecode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="rotdTitle" style="color: white">Rot - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/rotd/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="rotd" required><br><br>
+                <h2 style="color: white">Input Key:</h2>
+            <input type="number" name="keyd" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- rot - encode Modal -->
+<div class="modal fade"  id="rotencode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="roteTitle" style="color: white">Rot - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/rote/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="rote" required><br><br>
+                <h2 style="color: white">Input Key:</h2>
+            <input type="number" name="keye" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+                    <!-- caesar Modal -->
+<div class="modal fade"  id="caesar" tabindex="-1" role="dialog" aria-labelledby="caesarTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="caesarTitle" style="color: white">Caesar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#caesarencode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#caesardecode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- caesar - decode Modal -->
+<div class="modal fade"  id="caesardecode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="caesardTitle" style="color: white">Caesar - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/caesard/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="caesard" required><br><br>
+                <h2 style="color: white">Input Key:</h2>
+            <input type="number" name="keyd" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- caesar - encode Modal -->
+<div class="modal fade"  id="caesarencode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="caesareTitle" style="color: white">Caesar - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/caesare/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="caesare" required><br><br>
+                <h2 style="color: white">Input Key:</h2>
+            <input type="number" name="keye" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- morse Modal -->
+<div class="modal fade"  id="morse" tabindex="-1" role="dialog" aria-labelledby="morseTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="morseTitle" style="color: white">Morse</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#morseencode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#morsedecode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- morse - decode Modal -->
+<div class="modal fade"  id="morsedecode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="morsedTitle" style="color: white">Morse - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/morsed/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="morsed" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Morse - encode Modal -->
+<div class="modal fade"  id="morseencode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="morseeTitle" style="color: white">Morse - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/morsee/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="morsee" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- bacon Modal -->
+<div class="modal fade"  id="bacon" tabindex="-1" role="dialog" aria-labelledby="caesarTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="baconTitle" style="color: white">Bacon</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#baconencode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bacondecode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- bacon - decode Modal -->
+<div class="modal fade"  id="bacondecode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="bacondTitle" style="color: white">Bacon - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/bacond/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="bacond" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- bacon - encode Modal -->
+<div class="modal fade"  id="baconencode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="baconeTitle" style="color: white">Bacon - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/bacone/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="bacone" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+            <!-- vigenere Modal -->
+<div class="modal fade"  id="vigenere" tabindex="-1" role="dialog" aria-labelledby="vigenereTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title"  id="vigenerTitle" style="color: white">Vigenere</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vigenereencode">Encode</button></div>
+      <div class="col-lg-4 col-md-4 col-sm-12 pt-3">  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vigeneredecode">Decode</button></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- vigenere - decode Modal -->
+<div class="modal fade"  id="vigeneredecode" tabindex="-1" role="dialog" aria-labelledby="decodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="vigeneredTitle" style="color: white">vigenere - Decode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/vigenered/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="vigenered" required><br><br>
+                <h2 style="color: white">Input Key:</h2>
+            <input type="text" name="keyd" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Decode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- bacon - encode Modal -->
+<div class="modal fade"  id="vigenereencode" tabindex="-1" role="dialog" aria-labelledby="encodeTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content bg-dark">
+      <div class="modal-header bg-dark">
+        <h5 class="modal-title text-center"  id="vigenereTitle" style="color: white">Bacon - Encode</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body btn-group" role="group">
+      <div class="text-center col-lg-6 col-md-6 col-sm-12 pt-3">
+          <br><br>
+            <form action="/vigeneree/" method="POST">
+                {% csrf_token %}
+                    <h2 style="color: white">Input Text:</h2>
+            <input type="text" name="vigeneree" required><br><br>
+                <h2 style="color: white">Input Key:</h2>
+            <input type="text" name="keye" required><br><br>
+                {{data_external}}<br><br>
+                <br><br>
+            <input type="submit" value="Encode!">
+            </form>
+          <br><br>
+      </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

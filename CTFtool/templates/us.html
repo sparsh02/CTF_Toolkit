@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>About US</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" media="screen" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navbar Navigation Header code  -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{%url 'home'  %}">S@n!t!z3r</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="navbar-brand" href="{%url 'home'  %}">Home</a>
+                </li>
+
+
+
+              </ul>
+            </div>
+          </nav>
+        </header>
+<!-- particles.js container -->
+<div id="particles-js"></div>
+<!-- scripts -->
+<script src="{% static '/particles.js' %}"></script>
+<script src="{% static 'js/app.js' %}"></script>
+
+
+
+<!-- About us section  -->
+
+          <section>
+              <div class="panel1" style=" width: 1200px">
+              <h1 class="text-center text-capitalize pt-3 " style="color: white; Font-size: 60px;">About Us</h1>
+              <hr class="w-25 mx-auto">
+                <br><br>
+              <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                <img src="{% static 'images/ankur.jpg' %}" class="img-fluid" width="250px">
+              </div>
+                <div class="col-lg-8 col-md-8 col-sm-12 pb-5 text-center">
+                    <h1 style="color: white; Font-size: 40px">Ankur Das</h1>
+                    <hr>
+                    <p style="color: white; Font-size: 20px">19BCS3523</p>
+                    <br><br>
+                      <p style="color: white; Font-size: 20px">
+                      Backend/Documentation
+                    </p>
+                    <br><br><br><br>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <img src="{% static 'images/tanmay.jpg' %}" class="img-fluid" width="250px">
+                </div>
+                  <div class="col-lg-8 col-md-8 col-sm-12 pb-5 text-center">
+                      <h1 style="color: white; Font-size: 40px">Tanmay Rastogi</h1>
+                      <hr>
+                      <p style="color: white; Font-size: 20px">
+                        19BCS3534</p>
+                      <br><br>
+                        <p style="color: white; Font-size: 20px">
+                          Frontend/Design
+                      </p>
+                      <br><br><br><br>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="{% static 'images/anshul.jpg' %}" class="img-fluid" width="250px">
+                  </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 pb-5 text-center">
+                        <h1 style="color: white; Font-size: 40px">Anshul Verma</h1>
+                        <hr>
+                        <p style="color: white ; Font-size: 20px">
+                        19BCS3537</p>
+                        <br><br>
+                        <p style="color: white ; Font-size: 20px">
+                          Scripts/Documentation
+                        </p>
+                        <br><br><br><br>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12">
+                      <img src="{% static 'images/piya.jpg' %}" class="img-fluid" width="250px">
+                    </div>
+                      <div class="col-lg-8 col-md-8 col-sm-12 pb-5 text-center">
+                          <h1 style="color: white; Font-size: 40px">Piya Kothari</h1>
+                          <hr>
+                          <p style="color: white; Font-size: 20px">
+                        19BCS3544</p>
+                          <br><br>
+                          <p style="color: white; Font-size: 20px">
+                            Frontend/Design
+                          </p>
+                          <br><br><br><br>
+                  </div>
+                  <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img src="{% static 'images/sparsh.jpg' %}" class="img-fluid" width="250px">
+                  </div>
+                    <div class="col-lg-8 col-md-8 col-sm-12 pb-5 text-center">
+                        <h1 style="color: white; Font-size: 40px">Sparsh Mishra</h1>
+                        <hr>
+                        <p style="color: white; Font-size: 20px">
+                        19BCS3518</p>
+                        <br><br>
+                        <p style="color: white; Font-size: 20px">
+                          Backend/Documentation
+                        </p>
+                        <br><br><br><br>
+                </div>
+</div>
+
+</div>
+</section>
+
+<section class="bg-dark pb-2">
+    <article  class="pt-2 text-center text-white">
+        <div>
+            <p>Designed and Developed for Minor-Project 1.</p>
+        </div>
+    </article>
+</section>
+
+
+</body>
+</html>
